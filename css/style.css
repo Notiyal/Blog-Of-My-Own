@@ -1,0 +1,70 @@
+/* Ragin Beige: #fff5d7
+
+Coral Pink: #ff5e6c
+
+Sleuthe Yellow: #feb300
+
+Pink Leaf: #ffaaab */
+
+body{
+  /* grid with 4 rows - div.fixed_position, div, main, footer with gap and some background color */
+
+  display: grid;
+  grid-template-rows: 60px 300px 300px 300px;
+  gap: 20px;
+  background-color: #D5F3FE;
+}
+
+header img{
+  height: 60px;
+  width: 200px;
+ 
+}
+
+.fixed_position{
+  background-color: #afe6fa;
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  z-index: 999;
+  overflow: hidden;
+}
+
+header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+ 
+}
+
+nav ul{
+  display: flex;
+  gap: 30px;
+  flex-direction: row;
+  font-size: 22px;
+  margin: 20px;
+}
+
+ul a{
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.heading{
+  margin-top: 80px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.heading span{
+  font-style: italic;
+}
+
+main{
+ 
+}
+
+footer{
+  
+}
