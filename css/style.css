@@ -1,18 +1,25 @@
-/* Ragin Beige: #fff5d7
-
-Coral Pink: #ff5e6c
-
-Sleuthe Yellow: #feb300
-
-Pink Leaf: #ffaaab */
 
 body{
-  /* grid with 4 rows - div.fixed_position, div, main, footer with gap and some background color */
+    /*gridwith4rows-div.fixed_position,div,main,footerwithgapandsomebackgroundcolor*/
+    display: grid;
+    gap: 20px;
+    width: 100%;
+    height: 100vh;
+    
+  
+}
 
-  display: grid;
-  grid-template-rows: 60px 300px 300px 300px;
-  gap: 20px;
-  background-color: #D5F3FE;
+
+
+img{
+  height: 300px;
+  width: 300px;
+  border: 1px solid rgb(17, 115, 185);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 
 header img{
@@ -22,19 +29,24 @@ header img{
 }
 
 .fixed_position{
-  background-color: #afe6fa;
+ 
   width: 100%;
   height: 60px;
   position: fixed;
   z-index: 999;
   overflow: hidden;
+
+ background-color: black;
+  
 }
+
+
 
 header{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
- 
+
 }
 
 nav ul{
@@ -46,25 +58,76 @@ nav ul{
 }
 
 ul a{
-  color: black;
+  color: rgb(144, 193, 229);
   font-weight: bold;
   text-decoration: none;
 }
 
 .heading{
-  margin-top: 80px;
+  /* background-image:url('https://static.pexels.com/photos/414171/pexels-photo-414171.jpeg'); */
+  margin-top: 60px;
   text-align: center;
   font-size: 20px;
+  
+  /* animation: moving 100s infinite alternate forwards;
+  -webkit-animation: moving 100s infinite alternate forwards;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; */
+
+  
+
 }
+
+h1{
+  margin-bottom: auto;
+}
+
 
 .heading span{
   font-style: italic;
 }
 
 main{
- 
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner_section{
+  margin: 15px;
+  height: 480px;
+  background-color: rgb(144, 193, 229);
+  padding-top: 20px;
+}
+
+.section{
+  margin: 10px;
+  background-color: rgb(144, 193, 229);
+  /* border: 1px solid rgb(17, 115, 185); */
+  border-radius: 10px;
+}
+
+.section h5{
+  text-align: center;
+  margin: 8px 0;
+}
+
+.section p{
+  text-align:justify;
+  margin: 8px 0;
 }
 
 footer{
-  
+ background-color: black;
+ color: rgb(144, 193, 229);
+ display: flex;
+ justify-content: center;
+ align-items: center;
 }
+
+
+
