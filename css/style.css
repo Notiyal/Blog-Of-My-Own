@@ -5,21 +5,6 @@ body{
     gap: 20px;
     width: 100%;
     height: 100vh;
-    
-  
-}
-
-
-
-img{
-  height: 300px;
-  width: 300px;
-  border: 1px solid rgb(17, 115, 185);
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
 }
 
 header img{
@@ -29,15 +14,11 @@ header img{
 }
 
 .fixed_position{
- 
   width: 100%;
   height: 60px;
   position: fixed;
   z-index: 999;
-  overflow: hidden;
-
- background-color: black;
-  
+  overflow: hidden;background-color: black;
 }
 
 
@@ -64,24 +45,14 @@ ul a{
 }
 
 .heading{
-  /* background-image:url('https://static.pexels.com/photos/414171/pexels-photo-414171.jpeg'); */
   margin-top: 60px;
   text-align: center;
   font-size: 20px;
-  
-  /* animation: moving 100s infinite alternate forwards;
-  -webkit-animation: moving 100s infinite alternate forwards;
-
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; */
-
-  
-
 }
 
 h1{
   margin-bottom: auto;
+  color: rgb(7, 106, 177);
 }
 
 
@@ -92,16 +63,22 @@ h1{
 main{
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  gap: 10px;
   justify-content: center;
   align-items: center;
+ 
 }
 
 .inner_section{
-  margin: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: 480px;
   background-color: rgb(144, 193, 229);
   padding-top: 20px;
+  border-radius: 10px;
+  
 }
 
 .section{
@@ -109,14 +86,28 @@ main{
   background-color: rgb(144, 193, 229);
   /* border: 1px solid rgb(17, 115, 185); */
   border-radius: 10px;
+  
 }
 
-.section h5{
+
+.section h3{
   text-align: center;
-  margin: 8px 0;
+  margin: 20px 0 5px 0;
+  font-weight: bold;
+}
+
+img{
+  width: 280px;
+  height: 250px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 
 .section p{
+  padding: 0 25px;
   text-align:justify;
   margin: 8px 0;
 }
@@ -127,6 +118,152 @@ footer{
  display: flex;
  justify-content: center;
  align-items: center;
+ padding: 7px;
+ opacity: 0.8;
+}
+
+
+/* Animation section for bouncing balls */
+
+.ball1{
+  width: 140px;
+  height: 140px;
+  background-color: rgb(10, 120, 198);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  margin: 50px;
+  position: absolute;
+  z-index: -100;
+  animation: bounce1 2s infinite;
+  -webkit-animation: bounce1 2s infinite;
+}
+
+
+/* @keyframes bounce */
+
+@keyframes bounce1 {
+
+  0%{
+    top: 0;
+    /* animation-timing-function: ease-in; */
+    -webkit-animation-timing-function: ease-in;
+  }
+
+  40% {
+  
+  }
+
+  50% {
+    top: 500px;
+    height: 300px;
+    -webkit-animation-timing-function: ease-out;
+  }
+
+  55% {
+    top: 480px;
+    height: 180px;
+    -webkit-animation-timing-function: ease-in;
+  }
+
+  65% {
+    top: 300px;
+    height: 200px;
+    -webkit-animation-timing-function: ease-out;
+  }
+
+  95% {
+    top: 0;
+    -webkit-animation-timing-function: ease-in;
+  }
+  
+  100% {
+    top: 0;
+    -webkit-animation-timing-function: ease-out;
+  }
+
+}
+
+
+.ball2{
+  width: 30px;
+  height: 30px;
+  background-color: rgb(218, 218, 45);
+  border-radius: 50%;
+  margin-top: 60px;
+  margin-left: 360px;
+  position: absolute;
+  z-index: -100;
+  animation: bounce2 5s infinite;
+  -webkit-animation: bounce2 5s infinite;
+  -webkit-border-radius:;
+  -moz-border-radius:;
+  -ms-border-radius:;
+  -o-border-radius:;
+}
+
+
+/* bounce 2 */
+
+@keyframes bounce2 {
+
+  0%{
+    top: 0;
+    -webkit-animation-timing-function: ease;
+  }
+
+  40% {
+    top: 300px;
+    
+    -webkit-animation-timing-function: ease;
+  }
+
+  50% {
+    top: 400px;
+    
+    -webkit-animation-timing-function: ease;
+  }
+
+  55% {
+    top: 500px;
+    height: 50px;
+    -webkit-animation-timing-function: ease;
+  }
+
+  65% {
+    top: 600px;
+    height: 50px;
+    -webkit-animation-timing-function: ease;
+  }
+
+  70% {
+    top: 700px;
+    height: 60px;
+    -webkit-animation-timing-function: ease;
+  }
+
+  75% {
+    top: 500px;
+    height: 50px;
+    -webkit-animation-timing-function: ease;
+  }
+
+  95% {
+    top: 300px;
+    height: 50px;
+    -webkit-animation-timing-function: ease;
+ 
+   }
+  
+  100% {
+    top: 58;
+    height: 70px;
+    -webkit-animation-timing-function: ease;
+ 
+   }
+
 }
 
 
