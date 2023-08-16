@@ -27,7 +27,6 @@ header{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
 }
 
 nav ul{
@@ -52,15 +51,33 @@ ul a{
 
 h1{
   margin-bottom: auto;
-  color: rgb(7, 106, 177);
+  color: rgb(2, 76, 128);
 }
 
+.title{
+  background-color: black;
+
+  font-size: 20px;
+  color:  rgb(144, 193, 229);
+  font-weight: bold;
+  padding: 8px;
+  text-align: center;
+}
 
 .heading span{
   font-style: italic;
+  font-weight: bold;
 }
 
 main{
+  display: grid;
+  grid-template-columns: 1fr 60px;
+  /* justify-content: start; */
+  align-items: center;
+
+}
+
+.main{
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
@@ -74,15 +91,18 @@ main{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 480px;
+  height: 520px;
   background-color: rgb(144, 193, 229);
   padding-top: 20px;
+  padding-bottom: 20px;
   border-radius: 10px;
-  
 }
+
+
 
 .section{
   margin: 10px;
+ 
   background-color: rgb(144, 193, 229);
   /* border: 1px solid rgb(17, 115, 185); */
   border-radius: 10px;
@@ -96,9 +116,10 @@ main{
   font-weight: bold;
 }
 
-img{
+.section img{
+  align-self: auto;
   width: 280px;
-  height: 250px;
+  height: 200px;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -112,6 +133,43 @@ img{
   margin: 8px 0;
 }
 
+.review_section{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: left;
+  margin: 10px;
+  cursor: pointer;
+  
+}
+
+aside{
+  width: 40px;
+  padding-left: 0.5rem;
+  margin-left: 0.5rem;
+  box-shadow: inset 5px 0 5px -5px #29627e;
+  font-style: italic;
+  color: #29627e;
+}
+
+aside i{
+  padding-top: 20px;
+  height: 40px;
+  width: 40px;
+}
+
+.fa-brands{
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.divider{
+  padding: 0.1rem;
+  background-color: rgb(72, 72, 72);
+}
+
+
+
 footer{
  background-color: black;
  color: rgb(144, 193, 229);
@@ -123,7 +181,9 @@ footer{
 }
 
 
-/* Animation section for bouncing balls */
+/* Animation section for bouncing balls in blog page */
+
+/* Ball 1 */
 
 .ball1{
   width: 140px;
@@ -141,8 +201,6 @@ footer{
   -webkit-animation: bounce1 2s infinite;
 }
 
-
-/* @keyframes bounce */
 
 @keyframes bounce1 {
 
@@ -186,6 +244,7 @@ footer{
 
 }
 
+/* bounce 2 */
 
 .ball2{
   width: 30px;
@@ -198,14 +257,8 @@ footer{
   z-index: -100;
   animation: bounce2 5s infinite;
   -webkit-animation: bounce2 5s infinite;
-  -webkit-border-radius:;
-  -moz-border-radius:;
-  -ms-border-radius:;
-  -o-border-radius:;
 }
 
-
-/* bounce 2 */
 
 @keyframes bounce2 {
 
@@ -266,5 +319,423 @@ footer{
 
 }
 
+/* Ball 3  */
+
+.ball3{
+  width: 60px;
+  height: 60px;
+  background-color: rgb(172, 55, 141);
+  border-radius: 50%;
+  margin: 50px 0 50px 200px;
+  position: absolute;
+  /*z-index: -100;
+  */animation: bounce1 1s infinite;
+  -webkit-animation: bounce1 3s infinite;
+  opacity: 0.5;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
 
 
+@keyframes bounce1 {
+
+  0%{
+    top: 0;
+    /* animation-timing-function: ease-in; */
+    -webkit-animation-timing-function: ease-in;
+  }
+
+  40% {
+  
+  }
+
+  50% {
+    top: 500px;
+    height: 300px;
+    -webkit-animation-timing-function: ease-out;
+  }
+
+  55% {
+    top: 480px;
+    height: 180px;
+    -webkit-animation-timing-function: ease-in;
+  }
+
+  65% {
+    top: 300px;
+    height: 200px;
+    -webkit-animation-timing-function: ease-out;
+  }
+
+  95% {
+    top: 0;
+    -webkit-animation-timing-function: ease-in;
+  }
+  
+  100% {
+    top: 0;
+    -webkit-animation-timing-function: ease-out;
+  }
+
+}
+
+
+/* Ball 4  */
+
+.ball4{
+  width: 50px;
+  height: 50px;
+  background-color: rgb(11, 127, 2);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  margin: 50px 0 50px 600px;
+  position: absolute;
+  z-index: -100;
+  animation: bounce4 8s infinite;
+  -webkit-animation: bounce4 8s infinite;
+}
+
+@keyframes bounce4 {
+
+  0%{
+    top: 0;
+    /* animation-timing-function: ease-in; */
+    -webkit-animation-timing-function: ease-in;
+  }
+
+  40% {
+  
+  }
+
+  50% {
+    top: 500px;
+    height: 300px;
+    -webkit-animation-timing-function: ease-out;
+  }
+
+  55% {
+    top: 480px;
+    height: 180px;
+    -webkit-animation-timing-function: ease-in;
+  }
+
+  65% {
+    top: 300px;
+    height: 200px;
+    -webkit-animation-timing-function: ease-out;
+  }
+
+  95% {
+    top: 0;
+    -webkit-animation-timing-function: ease-in;
+  }
+  
+  100% {
+    top: 0;
+    -webkit-animation-timing-function: ease-out;
+  }
+
+}
+
+/* ball 5 */
+
+.ball5{
+  width: 30px;
+  height: 30px;
+  background-color: rgb(243, 16, 16);
+  border-radius: 50%;
+  margin: 60px 0 50px 800px;
+  position: absolute;
+  z-index: -100;
+  animation: bounce5 6s infinite;
+  -webkit-animation: bounce5 6s infinite;
+}
+@keyframes bounce5 {
+
+  0%{
+    top: 0;
+    -webkit-animation-timing-function: ease;
+  }
+
+  40% {
+    top: 300px;
+    
+    -webkit-animation-timing-function: ease;
+  }
+
+  50% {
+    top: 400px;
+    
+    -webkit-animation-timing-function: ease;
+  }
+
+  55% {
+    top: 500px;
+    height: 50px;
+    -webkit-animation-timing-function: ease;
+  }
+
+  65% {
+    top: 600px;
+    height: 50px;
+    -webkit-animation-timing-function: ease;
+  }
+
+  70% {
+    top: 700px;
+    height: 60px;
+    -webkit-animation-timing-function: ease;
+  }
+
+  75% {
+    top: 500px;
+    height: 50px;
+    -webkit-animation-timing-function: ease;
+  }
+
+  95% {
+    top: 300px;
+    height: 50px;
+    -webkit-animation-timing-function: ease;
+ 
+   }
+  
+  100% {
+    top: 58;
+    height: 70px;
+    -webkit-animation-timing-function: ease;
+ 
+   }
+
+}
+
+/* Ball 6 */
+
+.ball6{
+  width: 20px;
+  height: 20px;
+  background-color: rgb(3, 31, 1);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  margin: 50px 0 50px 900px;
+  position: absolute;
+  /* z-index: -100; */
+  animation: bounce4 8s infinite;
+  -webkit-animation: bounce4 8s infinite;
+  opacity: 0.5;
+}
+
+@keyframes bounce6 {
+
+  0%{
+    top: 0;
+    -webkit-animation-timing-function: ease-in;
+  }
+
+  40% {
+  
+  }
+
+  50% {
+    top: 500px;
+    /* height: 60px; */
+    -webkit-animation-timing-function: ease-out;
+  }
+
+  55% {
+    top: 480px;
+    /* height: 60px; */
+    -webkit-animation-timing-function: ease-in;
+  }
+
+  65% {
+    top: 300px;
+    /* height: 60px; */
+    -webkit-animation-timing-function: ease-out;
+  }
+
+  95% {
+    top: 0;
+    -webkit-animation-timing-function: ease-in;
+  }
+  
+  100% {
+    top: 0;
+    -webkit-animation-timing-function: ease-out;
+  }
+
+}
+
+
+
+/* Ball 7 */
+
+.ball7{
+  width: 100px;
+  height: 100px;
+  background-color: rgb(255, 138, 3);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  margin: 50px 0 50px 1100px;
+  position: absolute;
+  z-index: -100;
+  animation: bounce4 8s infinite;
+  -webkit-animation: bounce4 5s infinite;
+  opacity: .7;
+/
+}
+
+@keyframes bounce7 {
+
+  0%{
+    top: 0;
+    -webkit-animation-timing-function: ease-in;
+  }
+
+  40% {
+  
+  }
+
+  50% {
+    top: 500px;
+    /* height: 60px; */
+    -webkit-animation-timing-function: ease-out;
+  }
+
+  55% {
+    top: 480px;
+    /* height: 60px; */
+    -webkit-animation-timing-function: ease-in;
+  }
+
+  65% {
+    top: 300px;
+    /* height: 60px; */
+    -webkit-animation-timing-function: ease-out;
+  }
+
+  95% {
+    top: 0;
+    -webkit-animation-timing-function: ease-in;
+  }
+  
+  100% {
+    top: 0;
+    -webkit-animation-timing-function: ease-out;
+  }
+
+}
+
+/* Media Query */
+
+/* 1. Laptop */
+
+@media screen and (max-width: 1024px) {
+  body{
+    width: 100%;
+  }
+
+ .section img{
+  width: 150px;
+  height: 120px;
+ }
+
+ .hide-for-small-screen{
+  display: none;
+ }
+
+ .inner_section{
+  height: 430px;
+  margin-bottom: -10px;
+ }
+
+.ball6, .ball7, .ball8{
+  display: none;
+  opacity: 0;
+}
+
+}
+
+/* 2. Tablet */
+
+@media screen and (max-width: 768px) {
+
+  body{
+    width: 100%;
+  }
+
+  h1{
+    font-size: 30px;
+  }
+
+  .main{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .section img{
+    width: 200px;
+    height: 180px;
+   }
+  
+  
+  header{
+    justify-content: space-between;
+  }
+
+  .ball3, .ball4, .ball5, .ball6, .ball7, .ball8{
+    display: none;
+    opacity: 0;
+  }
+}
+
+/* 3. Mobile */
+
+@media screen and (max-width: 425px) {
+
+  body{
+    width: 100%;
+    display: grid;
+    grid-template-rows: 100px 1fr;
+  }
+
+  h1{
+    font-size: 35px;
+  }
+
+  .main{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .section img{
+    width: 135px;
+    height: 100px;
+   }
+
+  .inner_section{
+    height: 300px;
+    margin-top: 15px;
+   }
+  
+  
+  header{
+    justify-content: space-between;
+  }
+
+  .ball5, .ball6, .ball7, .ball8{
+    display: none;
+    opacity: 0;
+  }
+}
