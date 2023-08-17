@@ -21,7 +21,9 @@ header img{
   overflow: hidden;background-color: black;
 }
 
-
+.login{
+  display: none;
+}
 
 header{
   display: flex;
@@ -54,6 +56,71 @@ h1{
   color: rgb(2, 76, 128);
 }
 
+.flip_main {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.flip_inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  -webkit-transition: transform 0.6s;
+  -moz-transition: transform 0.6s;
+  -ms-transition: transform 0.6s;
+  -o-transition: transform 0.6s;
+  transform-style: preserve-3d;
+  /* box-shadow: 0 5px 10px 1px rgba(0,0,0,0.2); */
+}
+
+.flip_main:hover .flip_inner{
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+}
+
+.flip_front, .flip_back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.flip_front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip_back {
+  /* background-color: #2980b9; */
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.home_image{
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
 .title{
   background-color: black;
 
@@ -83,8 +150,31 @@ main{
   gap: 10px;
   justify-content: center;
   align-items: center;
- 
+  margin-left: 20px;
 }
+
+.home_main{
+  display: grid;
+  grid-template-columns: 350px 1fr 60px;
+  padding-left: 20px;
+}
+
+.home_section h2{
+  font-size: 25px;
+  margin: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+.top_inner_stories small{
+  /* text-align: right; */
+  font-weight:bold;
+  float: right;
+  margin-bottom: 10px;
+}
+
+
 
 .inner_section{
   display: flex;
@@ -92,10 +182,13 @@ main{
   justify-content: center;
   align-items: center;
   height: 520px;
-  background-color: rgb(144, 193, 229);
   padding-top: 20px;
   padding-bottom: 20px;
   border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 
 
@@ -116,16 +209,26 @@ main{
   font-weight: bold;
 }
 
+.top_inner_stories h3 {
+  text-align: left;
+}
+
+.top_inner_stories{
+  margin: 15px;
+}
+
 .section img{
   align-self: auto;
-  width: 280px;
-  height: 200px;
+  width: 200px;
+  height: 140px;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
 }
+
+
 
 .section p{
   padding: 0 25px;
@@ -161,11 +264,6 @@ aside i{
 .fa-brands{
   font-weight: 800;
   cursor: pointer;
-}
-
-.divider{
-  padding: 0.1rem;
-  background-color: rgb(72, 72, 72);
 }
 
 
@@ -702,16 +800,61 @@ footer{
 
 /* 3. Mobile */
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 426px) {
 
-  body{
-    width: 100%;
-    display: grid;
-    grid-template-rows: 100px 1fr;
+  html{
+    width: 90%;
+  
   }
 
+  .fixed_position{
+    height: 200px;
+    width: 100%;
+    position: relative;
+  }
+
+  header{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 40px;
+    align-items: center;
+    /* position: fixed; */
+  }
+
+  nav{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+  }
+
+  nav ul{
+    flex-direction: column;
+    margin-bottom: 0;
+    font-size: 15px;
+    gap: 12px;
+  }
+
+  .login{
+    padding-left: 7px;
+    display: inline;
+  }
+
+  header img{
+    width: 111px;
+    height: 40px;
+  }
+
+  .heading{
+    margin-top: -10px;
+  }
   h1{
-    font-size: 35px;
+    font-size: 25px;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
   }
 
   .main{
@@ -719,23 +862,31 @@ footer{
     grid-template-columns: 1fr;
   }
 
+  .section{
+    height: 400px;
+  }
+
   .section img{
     width: 135px;
     height: 100px;
    }
-
+   
   .inner_section{
-    height: 300px;
-    margin-top: 15px;
+    height: 400px;
    }
   
-  
-  header{
-    justify-content: space-between;
-  }
 
-  .ball5, .ball6, .ball7, .ball8{
+  .ball2, .ball3, .ball4, .ball5, .ball6, .ball7, .ball8{
     display: none;
     opacity: 0;
+  }
+
+  .side_galary ul{
+    display: flex;
+    order: -1;
+  }
+
+  footer{
+    text-align: center;
   }
 }
