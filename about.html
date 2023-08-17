@@ -1,3 +1,5 @@
+<!-- Responsive -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,9 +28,9 @@
       
       <nav>
         <ul>
-          <li><a href="#">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="blog.html">Blogs</a></li>
-          <li><a href="about.html">About Me</a></li>
+          <li><a href="#">About Me</a></li>
           <li><a href="contact.html">Contact</a></li>
           <!-- Font awesome libraries -->
           <li><a href=""><i class="fa-solid fa-user"></i><strong class="login">Login</strong></a></li>
@@ -42,23 +44,69 @@
 
   <div class="heading"><h1><strong>BOMO</strong> - <span>Blog of My Own</span></h1></div>
 
+  <div class="title"><h2>ABOUT MY WORK</h2></div>
+
   <!-- Grid 3 - Main -->
   <main>
-    <div class="main">
-      <div class="section">
+    <div class="main about_main">
+      <div class="inner_about">
+        <div class="section about_section">
 
-      </div>
+          <!-- Project Work - Responsive Images -->
+          <picture class="picture">
+            <img
+            sizes="(max-width: 535px) 100vw, 535px"
+            srcset="
+            images/blog_ayfhpg_c_scale,w_535.webp 535w,
+            images/blog_ayfhpg_c_scale,w_200.webp 200w"
+            src="images/blog_ayfhpg_c_scale,w_535.webp"
+            alt="">
+            <div class="centered">BLOGS</div>
+            </picture>
 
-      <div class="section">
-        
-      </div>
 
-      <div class="section">
-        
-      </div>
+            <picture class="picture">
+              <img
+              sizes="(max-width: 600px) 100vw, 600px"
+              srcset="
+              images/research_ja7bv5_c_scale,w_200.jpg 200w,
+              images/research_ja7bv5_c_scale,w_481.jpg 481w,
+              images/research_ja7bv5_c_scale,w_600.jpg 600w"
+              src="images/research_ja7bv5_c_scale,w_600.jpg"
+              alt="">
+              <div class="centered">RESEARCH</div>
+              </picture>
 
-      <div class="section">
-        
+              <picture class="picture">
+                <img
+                sizes="(max-width: 600px) 100vw, 600px"
+                srcset="
+                images/tech_iycpmx_c_scale,w_200.jpg 200w,
+                images/tech_iycpmx_c_scale,w_600.jpg 600w"
+                src="images/tech_iycpmx_c_scale,w_600.jpg"
+                alt="">
+                <div class="centered">TECH AI</div>
+                </picture>
+
+              <picture class="picture">
+                <img
+                sizes="(max-width: 600px) 100vw, 600px"
+                srcset="
+                images/started_y0ggzu_c_scale,w_200.jpg 200w,
+                images/started_y0ggzu_c_scale,w_438.jpg 438w,
+                images/started_y0ggzu_c_scale,w_600.jpg 600w"
+                src="images/started_y0ggzu_c_scale,w_600.jpg"
+                alt="">
+                <div class="centered">RESEARCH</div>
+              </picture>
+              
+
+
+        </div>
+  
+        <div class="section">
+          
+        </div>
       </div>
       
       <aside class="side_gallery">
